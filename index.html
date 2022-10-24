@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <!-- Meta Data -->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,20 +12,93 @@
 </head>
 
 <body>
+
+    <!-- Header -->
+
     <header>
         <div class="container">
             <nav>
                 <img src="./assets/images/brick1.png" class="logo">
+
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">Portfolio</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
+            <div class="header-text">
+                <p>Full Stack Engineer</p>
+                <h1>Hello, My name is<br><span>Jorge Zamora</span></h1>
+            </div>
         </div>
     </header>
+
+    <!-- About Me -->
+
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./assets/images/brick4.png">
+                </div>
+                <div class="about-col-2">
+                    <h2 class="sub-title">About Me</h2>
+                    <!-- PlaceHolder Text -->
+                    <p>What is Lorem Ipsum?
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap 
+                        into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links"onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                     <ul>
+                         <li><span>Skill</span><br>implementation</li>
+                           <li><span>Skill</span><br>implementation</li>
+                         <li><span>Skill</span><br>implementation</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                     <ul>
+                         <li><span>Experience</span><br>where i worked</li>
+                           <li><span>Experience</span><br>where i worked</li>
+                         <li><span>Experience</span><br>where i worked</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                     <ul>
+                         <li><span>Education</span><br>where i studied</li>
+                           <li><span>Education</span><br>where i studied</li>
+                         <li><span>Education</span><br>where i studied</li>
+                    </ul>
+                </div>                
+            </div> 
+        </div>
+    </section>
+
+    <script>
+            // Script Adds Responsive Elements to the About Me Section //
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+        function opentab(tabname) {
+            for(tablink of tablinks){
+                tablink.classList.remove("active");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active");
+            document.getElementById(tabname).classList.add("active-tab");
+ 
+        }
+
+
+    </script>
 </body>
 
 
