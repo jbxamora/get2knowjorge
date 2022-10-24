@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width, intiial-scale=1.0">
     <title>Portfolio - Jorge Zamora </title>
     <link rel="stylesheet" href="./assets/style.css">
+    <!-- Script to Allow Icon Injection -->
+    <script src="https://kit.fontawesome.com/ac5909b33d.js" crossorigin="anonymous" alt="Icons"></script>
 </head>
 
 <body>
@@ -41,16 +43,20 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
+                    <!-- note: add alt/ replace placeholder -->
                     <img src="./assets/images/brick4.png">
                 </div>
                 <div class="about-col-2">
                     <h2 class="sub-title">About Me</h2>
+
                     <!-- PlaceHolder Text -->
+
                     <p>What is Lorem Ipsum?
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                         when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap 
                         into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
                         and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
                 <div class="tab-titles">
                     <p class="tab-links active" onclick="opentab('skills')">Skills</p>
                     <p class="tab-links"onclick="opentab('experience')">Experience</p>
@@ -59,21 +65,21 @@
                 <div class="tab-contents active-tab" id="skills">
                      <ul>
                          <li><span>Skill</span><br>implementation</li>
-                           <li><span>Skill</span><br>implementation</li>
+                         <li><span>Skill</span><br>implementation</li>
                          <li><span>Skill</span><br>implementation</li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="experience">
                      <ul>
                          <li><span>Experience</span><br>where i worked</li>
-                           <li><span>Experience</span><br>where i worked</li>
+                         <li><span>Experience</span><br>where i worked</li>
                          <li><span>Experience</span><br>where i worked</li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="education">
                      <ul>
                          <li><span>Education</span><br>where i studied</li>
-                           <li><span>Education</span><br>where i studied</li>
+                         <li><span>Education</span><br>where i studied</li>
                          <li><span>Education</span><br>where i studied</li>
                     </ul>
                 </div>                
@@ -81,8 +87,41 @@
         </div>
     </section>
 
+    <!-- Services -->
+
+    <section id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-codepen"></i>
+                    <h2>Service</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                    labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                    <a href="#">Learn More</a>
+                </div>
+             <div>
+                    <i class="fa-sharp fa-solid fa-crop"></i>
+                    <h2>Service</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                    labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                    <a href="#">Learn More</a>
+             </div>
+              <div>
+                    <i class="fa-duotone fa-rocket-launch"></i>
+                    <h2>Service</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                    labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                    <a href="#">Learn More</a>
+            </div>
+         </div>
+
+        </div>
+
+    </section>
+
     <script>
-            // Script Adds Responsive Elements to the About Me Section //
+            // Script Adds Responsive Elements to the About Me Section src; https://www.w3schools.com/howto/howto_js_tabs.asp //
         var tablinks = document.getElementsByClassName("tab-links")
         var tabcontents = document.getElementsByClassName("tab-contents")
         function opentab(tabname) {
