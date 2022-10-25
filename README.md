@@ -1,30 +1,31 @@
-# get2knowjorge
-A portfolio of my work throughout my Full Stack Course
-# Code Refactor
+# Project Portfolio
+Jorge's Project Portfolio
 
 ## Description
 
-This is a refactor of the Horiseon Webpage to follow accessability standards. This refactor also optimizes the webpage for search engines. Through this repo you can view changes made to the website that make it more accessible to readers. 
+This is a portfolio I built from scratch meant to showcase skills, projects, and other experience I gain throughout the program. Throughout the README you'll see screenshots of the webpage, code snippets and you'll find a link to the deployed webpage.
 
 ### User Story
 ```
-AS A marketing agency
-I WANT a codebase that follows accessibility standards
-SO THAT our own site is optimized for search engines
+AS AN employer
+I WANT to view a potential employee's deployed portfolio of work samples
+SO THAT I can review samples of their work and assess whether they're a good candidate for an open position
 ```
 ### Acceptance Criteria
 ```
-GIVEN a webpage meets accessibility standards
-WHEN I view the source code
-THEN I find semantic HTML elements
-WHEN I view the structure of the HTML elements
-THEN I find that the elements follow a logical structure independent of styling and positioning
-WHEN I view the image elements
-THEN I find accessible alt attributes
-WHEN I view the heading attributes
-THEN they fall in sequential order
-WHEN I view the title element
-THEN I find a concise, descriptive title
+GIVEN I need to sample a potential employee's previous work
+WHEN I load their portfolio
+THEN I am presented with the developer's name, a recent photo or avatar, and links to sections about them, their work, and how to contact them
+WHEN I click one of the links in the navigation
+THEN the UI scrolls to the corresponding section
+WHEN I click on the link to the section about their work
+THEN the UI scrolls to a section with titled images of the developer's applications
+WHEN I am presented with the developer's first application
+THEN that application's image should be larger in size than the others
+WHEN I click on the images of the applications
+THEN I am taken to that deployed application
+WHEN I resize the page or view the site on various screens and devices
+THEN I am presented with a responsive layout that adapts to my viewport
 ```
 
 ## Table of Contents
@@ -36,126 +37,149 @@ THEN I find a concise, descriptive title
 6. [Contributing](#contributing)
 
 ## Installation
-No need to install applications to view the changes made. You can view the webpage by visitng the link below. 
+No Install Needed. You can access the webpage through the link below.
 
-[View Webpage](https://jbxamora.github.io/code-refactorizationinator/)
+![View Webpage](https://jbxamora.github.io/code-refactorizationinator/)
 
 ## Usage
 
-While there are no noticable changes here are some things you want to look out for.
+This will be my main source of content throughout the course. Here are some things I added to my webpage to make it more accessible to readers.
 ### Accessability
+I've added a @media querey to make the webpage accessable to all readers on all devices.
+The media screen removes the nav bar and adds a menu bar when the screen is smaller than 600px. This allows the same user experience for both desktop and mobile users.
+
+![Picture of Menu Bar on Mobile Device](./assets/images/mobilemenu.png)
 #### NavBar 
 
 A NavBar Implemented into the website so that users are able to quickly jump from section to section.
 
-![Picture of Nav bar](assets/images/navbar.png)
+![Picture of Nav bar](./assets/images/Navbar.png)
 
-#### Keyboard Accessability 
-One of the accessability standards goes over users main source of browsing a webpage being a keyboard. 
-Using the tab button on you keyboard you can navigate throughout the webpage. 
+#### Working Links
 
-![NavBar Tab Access](assets/images/navbartab.png)
+Ive added icons In the 'Portolio' Section of the webpage so you can view different projects and be redirected to the deployed sites. All you need to do is click.
+
+![Picture of Redirect Link](./assets/images/Redirectlinks.png)
 
 #### Comments
-For those that are looking inside the backend of a webpage, I've added comments to make reading through the html/css easier. 
+For those that are looking to inspect the inside of a webpage, I've added comments so you know where you are in the mass of CSS and HTML.
 
-![HTML Comments](assets/images/comments.png)
+![HTML Comments](./assets/images/Comments.png)
 
-### Changes Made
+### User Experience
 
-#### HTML
+#### Colors
 
-One of the first changes that was made was the implementation of semantic HTML.
-The latest commit reflects this change, you can see that we moved away from "div" elements that structure header,main,body,footer elements. For example:
+I've added different colors to capture the attention of readers and a black background for a nice contrast. I beleive this makes the webpage more visually appealing and easier to read.
 
-```html
- <div class="hero"></div>
-    <div class="content">
-        <div class="search-engine-optimization">
-```
+![Picture of Services Tab](./assets/images/USEREX.png)
 
-The converted HTML now follows semantic order. Example:
+### Contact Form
 
-```html
-<header class="header">
-        <h1>Hori<span class="seo">seo</span>n</h1>
-        <nav>
-```
+I went down a deep rabbit hole with this project. To showcase that I've implemented a working contact form. The contact form recieves information from the website and then sends it to a google sheet I set up. This wasn't entirely my idea but it bothered me that I built a contact form that did not serve it's purpose.
 
-Another Issue with the HTML was the sizing of fonts within the Benefits Area.
-This made the text very hard to read. 
+![Picture of Contact Form](./assets/images/Contactform.png)
 
-```html
-<h3>Cost Management</h3>
-```
-Although it is an extremely simple fix, I beleive this change will make the website more accessable to all types of readers. Simply changing the font size can have drastic impact wether or not the user can properly view the information.
 
-```html
-<h2>Cost Management</h2>
+This is the most advanced feature on my webpage.
 
-Another small but noticable change was the Title element for the website. This lets readers know what webpage is behind the tab.
+## Code Snippets
 
-![TABTITLE](assets/images/tabtitle.png)
+### Contact Form
 
-Lastly in HTML there was a bug that caused one of the links to break. Users would not be able to click the link and have it direct them to the correct article on the webpage. 
+Here is the script I used to connect my contact form to my google sheets. Once I created my Sheet, I went into the appscript extension and inputted this code. Once I deployed the app I was ready to take in contact information from readers.
 
-```html
-<div class="search-engine-optimization">
-```
+'''js
+var sheetName = 'Sheet1'
+var scriptProp = PropertiesService.getScriptProperties()
 
-This was a simple fix but could of been a major flaw if it wasn't caught.
-
-```html
-<section id="search-engine-optimization" class="search-engine-optimization">
-```
-#### CSS
-The changes to the CSS file reflect my need for it to be reader friendly and add a simple but significant twist to the webpage style.
-
-The first look at the CSS you can see a long page of CSS and at first glance it may seem intimidating but when you notice you can merge some code its an easy fix. My biggest and main change to the CSS was consolidating the code to make it less intimidating for readers. This also includes adding comments that give simple descriptions about where you are in reference to the HTML file.
-
-```CSS
-.search-engine-optimization img {
-    max-height: 200px;
+function intialSetup () {
+  var activeSpreadsheet = SpreadsheetApp.getActiveSpreadsheet()
+  scriptProp.setProperty('key', activeSpreadsheet.getId())
 }
 
-.online-reputation-management img {
-    max-height: 200px;
+function doPost (e) {
+  var lock = LockService.getScriptLock()
+  lock.tryLock(10000)
+
+  try {
+    var doc = SpreadsheetApp.openById(scriptProp.getProperty('key'))
+    var sheet = doc.getSheetByName(sheetName)
+
+    var headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0]
+    var nextRow = sheet.getLastRow() + 1
+
+    var newRow = headers.map(function(header) {
+      return header === 'timestamp' ? new Date() : e.parameter[header]
+    })
+
+    sheet.getRange(nextRow, 1, 1, newRow.length).setValues([newRow])
+
+    return ContentService
+      .createTextOutput(JSON.stringify({ 'result': 'success', 'row': nextRow }))
+      .setMimeType(ContentService.MimeType.JSON)
+  }
+
+  catch (e) {
+    return ContentService
+      .createTextOutput(JSON.stringify({ 'result': 'error', 'error': e }))
+      .setMimeType(ContentService.MimeType.JSON)
+  }
+
+  finally {
+    lock.releaseLock()
+  }
+}
+'''
+
+For a more thoughrough explaination here is where I found the script:
+https://github.com/jamiewilson/form-to-google-sheets
+
+### Hover
+
+Throughout the webpage the one psuedo class I utelized the most was :hover. You can see it in use on almost all the sections of the site from the navbar to Contact Form. Here is an example of that.
+
+'''css
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
 }
 
-.social-media-marketing img {
-    max-height: 200px;
-```
-
-After consolidation the code now looks like this. Not as intimidating and easy to read.
-
-```CSS
-  .search-engine-optimization img, .online-reputation-management img, .social-media-marketing img {
-    max-height: 200px;
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.7s;
 }
-```
-The last change to the CSS file was something I learned in class and have been waiting to implement. A hover feature!
-While this might not seem exciting I took into consideration that the 'SEO' in HORISEON stood for Search Engine Optimization. I noticed that those letters were an acronym and wanted to capitalize on that information. 
+'''
 
-![SEO Hover Model](assets/images/hoverseo.png)
+Renders this:
 
-Here is the underlying code if you want to add it to a future project.
+![Picture of Work](./assets/images/Redirectlinks.png)
 
-```css
-.header h1 .seo {
-    color: #d9dcd6;
-}
+### Icons
 
-.header h1 .seo:hover {
-    color: black;
-    transition: all .7s linear;
-}
-```
+I felt my webpage was a little lacking so I went in search of something that would spice it up. ICONS! Throughout the site you can see icons i've placed. There is a two step process to implementing Icons to your work.
+
+1. Enable the script to allow icons from a third party app/wepsite. For this I used https://fontawesome.com/icons This webpage gives you a peice of code to input into your HTML when you want to insert an icon.
+'''js
+    <script src="https://kit.fontawesome.com/ac5909b33d.js" crossorigin="anonymous" alt="Icons"></script>
+'''
+
+'''html
+                    <i class="fa-solid fa-rocket"></i>
+'''
+
+After adding some style to them they render like this:
+
+![Picture of Icons](./assets/images/Screen%20Shot%202022-10-25%20at%2012.04.00%20AM.png)
 
 ## License
 
 MIT License
 
-Copyright (c) [year] [fullname]
+Copyright (c) [2022] [Jorge Zamora]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -193,9 +217,12 @@ SOFTWARE.
 5. Accessability
 6. Hover 
 7. Comments
+8.Contact Form
+9.Media Query
+10.High Fidelity Wireframe
 
 ## Contributing
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. If the issue goes unresolved for more than a week feel free to contact me at any of the links listed below. Be sure to add me on LinkedIn and Follow me on GitHub to view my course progression.
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. If the issue goes unresolved for more than a week feel free to contact me at any of the links listed below. Be sure to add me on LinkedIn and Follow me on GitHub to view my course progression. You can also visit the deployed site and sent a messafe through the contact form.
 
 [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='40'>](https://github.com/jbxamora)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg' alt='linkedin' height='40'>](https://www.linkedin.com/in/jorge-zamora-786945250//)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg' alt='instagram' height='40'>](https://www.instagram.com/jbxamora/)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/stackoverflow.svg' alt='stackoverflow' height='40'>](https://stackoverflow.com/users/20023706/jbxamora)
