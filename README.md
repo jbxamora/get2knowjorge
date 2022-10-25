@@ -163,12 +163,13 @@ Renders this:
 I felt my webpage was a little lacking so I went in search of something that would spice it up. ICONS! Throughout the site you can see icons i've placed. There is a two step process to implementing Icons to your work.
 
 1. Enable the script to allow icons from a third party app/wepsite. For this I used https://fontawesome.com/icons This webpage gives you a peice of code to input into your HTML when you want to insert an icon.
+
 '''js
-    <script src="https://kit.fontawesome.com/ac5909b33d.js" crossorigin="anonymous" alt="Icons"></script>
+ <script src="https://kit.fontawesome.com/ac5909b33d.js" crossorigin="anonymous" alt="Icons"></script>
 '''
 
 '''html
-                    <i class="fa-solid fa-rocket"></i>
+ <i class="fa-solid fa-rocket"></i>
 '''
 
 After adding some style to them they render like this:
