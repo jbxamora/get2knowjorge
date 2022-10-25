@@ -39,7 +39,7 @@ THEN I am presented with a responsive layout that adapts to my viewport
 ## Installation
 No Install Needed. You can access the webpage through the link below.
 
-![View Webpage](https://jbxamora.github.io/get2knowjorge/)
+https://jbxamora.github.io/get2knowjorge/
 
 ## Usage
 
