@@ -89,7 +89,7 @@ This is the most advanced feature on my webpage.
 
 Here is the script I used to connect my contact form to my google sheets. Once I created my Sheet, I went into the appscript extension and inputted this code. Once I deployed the app I was ready to take in contact information from readers.
 
-'''js
+```js
 var sheetName = 'Sheet1'
 var scriptProp = PropertiesService.getScriptProperties()
 
@@ -130,7 +130,7 @@ function doPost (e) {
     lock.releaseLock()
   }
 }
-'''
+```
 
 For a more thoughrough explaination here is where I found the script:
 https://github.com/jamiewilson/form-to-google-sheets
@@ -139,7 +139,7 @@ https://github.com/jamiewilson/form-to-google-sheets
 
 Throughout the webpage the one psuedo class I utelized the most was :hover. You can see it in use on almost all the sections of the site from the navbar to Contact Form. Here is an example of that.
 
-'''css
+```css
 .work {
     border-radius: 10px;
     position: relative;
@@ -152,7 +152,8 @@ Throughout the webpage the one psuedo class I utelized the most was :hover. You 
     display: block;
     transition: transform 0.7s;
 }
-'''
+
+```
 
 Renders this:
 
@@ -164,13 +165,13 @@ I felt my webpage was a little lacking so I went in search of something that wou
 
 1. Enable the script to allow icons from a third party app/wepsite. For this I used https://fontawesome.com/icons This webpage gives you a peice of code to input into your HTML when you want to insert an icon.
 
-'''js
+```js
  <script src="https://kit.fontawesome.com/ac5909b33d.js" crossorigin="anonymous" alt="Icons"></script>
-'''
+```
 
-'''html
+```html
  <i class="fa-solid fa-rocket"></i>
-'''
+```
 
 After adding some style to them they render like this:
 
